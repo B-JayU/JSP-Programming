@@ -52,16 +52,23 @@
     - 이전 버전을 지원하는 컨테이너의 경우 사용 불가
 
 ## JSP에서 한글 표시 처리 설정
-  - page 지시어에 다음의 속성 기술
-    - pageEncoding="UTF-8"
-        contentType="text/html; charset=UFT-8"
-    
-    - 한글 문자셋 비교
-        - EUC-KR
-          - 확장 유닉스 코드(Extended Unix Code) 중 한글 인코딩 방식
-          - 국내 대상 사이트 구축시엔 문제없음
-        
-        - UTF-8
-          - 유니코드 표준
-          - 다국어 통합 사이트 구축시엔 추천
-   
+- page 지시어에 다음의 속성 기술
+  - pageEncoding="UTF-8" contentType="text/html; charset=UFT-8"
+  - 한글 문자셋 비교
+    - EUC-KR
+      - 확장 유닉스 코드(Extended Unix Code) 중 한글 인코딩 방식
+      - 국내 대상 사이트 구축시엔 문제없음
+  - UTF-8
+    - 유니코드 표준
+    - 다국어 통합 사이트 구축시엔 추천
+
+## page 지시어 : import 속성
+- 자바의 import 문장을 대체하는 속성
+  - 자바 코드에 사용할 클래 패키지들을 지정
+  - 자바의 import 문과 달리 콤마를 이용해 여러 패키지를 한 번에 지정 가능
+  - 하나의 JSP 페이지에 import 속성을 여러 번에 나눠 기술하는 것도 가능
+  - 자동 임포트 패키지
+    - java.lang.*
+    - javax.servlet.*
+    - javax.servlet.http.*
+    - javax.servlet.jsp.*
