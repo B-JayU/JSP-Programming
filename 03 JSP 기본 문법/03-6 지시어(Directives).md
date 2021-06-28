@@ -72,3 +72,14 @@
     - javax.servlet.*
     - javax.servlet.http.*
     - javax.servlet.jsp.*
+        
+## page 지시어: errorPage, isErrorPage
+- errorPage 속성
+  - 현재 JSP 페이지에서 발생한 오류를 처리하는 별도의 JSP 페이지를 기술
+    - 속성값: 오류 처리르 전담하는 JSP 페이지 지정
+      - 일관성 있게 오류 처리를 하기 위해
+
+- isErrorPage 속성
+  - 현재 JSP 페이지는 오류 처리를 위한 전용 페이지임을 알림
+    - 속성값: true, false(default)
+      - 오류 처리 페이지에만 사용되며 내장 객체 exception을 사용하여 에러를 처리
